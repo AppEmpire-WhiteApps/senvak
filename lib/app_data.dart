@@ -7,7 +7,6 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:network_info_plus/network_info_plus.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:signals_flutter/signals_flutter.dart';
@@ -388,14 +387,11 @@ class AppStore {
           checkedAt: DateTime.now(),
         );
       } else {
-        if (requestAccess && Platform.isIOS) {
-          await Permission.locationWhenInUse.request();
-        }
         final gateway = await _networkInfo.getWifiGatewayIP();
         network = NetworkSnapshot(
           connected: true,
-          ssid: await _networkInfo.getWifiName(),
-          bssid: await _networkInfo.getWifiBSSID(),
+          ssid: Platform.isIOS ? null : await _networkInfo.getWifiName(),
+          bssid: Platform.isIOS ? null : await _networkInfo.getWifiBSSID(),
           ip: await _networkInfo.getWifiIP(),
           gateway: gateway,
           latencyMs: await _measureLatency(gateway),

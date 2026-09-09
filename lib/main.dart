@@ -123,8 +123,9 @@ class _OnboardingState extends State<Onboarding> {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('senvak.onboarding.completed', true);
     if (!mounted) return;
-    Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (_) => const AppLoader()));
+    Navigator.of(
+      context,
+    ).pushReplacement(MaterialPageRoute(builder: (_) => const AppLoader()));
   }
 
   void next() {
@@ -496,7 +497,7 @@ class Overview extends StatelessWidget {
                 Row(
                   children: [
                     metric('GATEWAY', network.gateway ?? '—'),
-                    metric('BSSID', network.bssid ?? 'Permission needed'),
+                    metric('BSSID', network.bssid ?? 'Unavailable'),
                   ],
                 ),
               ],
