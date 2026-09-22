@@ -9,6 +9,9 @@ import 'package:signals_flutter/signals_flutter.dart';
 import 'app_data.dart';
 import 'audit_controllers.dart';
 import 'core/settings/audit_desk_info_panel.dart';
+import 'promotions/promotion_host.dart';
+import 'promotions/promotion_navigation.dart';
+import 'promotions/vpn_promo_button.dart';
 
 void _trackAppLaunch() {
   var launchTracked = false;
@@ -39,13 +42,27 @@ const lime = Color(0xFFCCFF62);
 const muted = Color(0xFF8A9997);
 const orange = Color(0xFFFF9B54);
 
-class SenvakApp extends StatelessWidget {
+class SenvakApp extends StatefulWidget {
   const SenvakApp({super.key});
+
+  @override
+  State<SenvakApp> createState() => _SenvakAppState();
+}
+
+class _SenvakAppState extends State<SenvakApp> {
+  final _promotionNavigation = PromotionNavigation();
+
+  @override
+  void dispose() {
+    _promotionNavigation.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'Senvak',
+    navigatorObservers: [_promotionNavigation],
     theme: ThemeData(
       brightness: Brightness.dark,
       scaffoldBackgroundColor: ink,
@@ -294,7 +311,7 @@ class _AppLoaderState extends State<AppLoader> {
   @override
   Widget build(BuildContext context) => Watch(
     (context) => store.initialized
-        ? Shell(store: store)
+        ? PromotionHost(child: Shell(store: store))
         : const Scaffold(
             body: Center(child: CircularProgressIndicator(color: mint)),
           ),
@@ -367,6 +384,7 @@ class SenvakSettings extends StatelessWidget {
       SizedBox(height: 10),
       Text('Manage Senvak and get help.', style: TextStyle(color: muted)),
       SizedBox(height: 24),
+      VpnPromoButton(),
       AuditDeskInfoPanel(appName: 'Senvak', accent: mint, textColor: muted),
     ],
   );
@@ -439,6 +457,7 @@ class Overview extends StatelessWidget {
             onRefresh: store.loadingNetwork ? null : store.refreshNetwork,
           ),
           const SizedBox(height: 24),
+          const VpnPromoButton(),
           Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
@@ -685,6 +704,7 @@ class SitesScreen extends StatelessWidget {
       children: [
         const PageTop('SAVED ON THIS DEVICE', 'Audit sites'),
         const SizedBox(height: 24),
+        const VpnPromoButton(),
         if (store.sites.isEmpty)
           EmptyCard(
             icon: Icons.layers_outlined,
@@ -775,6 +795,7 @@ class HistoryScreen extends StatelessWidget {
       children: [
         PageTop('${points.length} MEASUREMENTS', 'History'),
         const SizedBox(height: 24),
+        const VpnPromoButton(),
         if (points.isEmpty)
           const EmptyCard(
             icon: Icons.history_rounded,
