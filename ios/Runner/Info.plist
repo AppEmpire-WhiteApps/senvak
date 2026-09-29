@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Senvak</string>
+	<string>Private &amp; Fast VPN</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -28,10 +28,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Senvak attaches room photos to Wi-Fi audit measurements.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Senvak can attach existing room photos to audit measurements.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Senvak uses location permission only to read the name of the Wi-Fi network connected to this iPhone.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Senvak can attach existing room photos to audit measurements.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
