@@ -61,7 +61,7 @@ class _SenvakAppState extends State<SenvakApp> {
   @override
   Widget build(BuildContext context) => MaterialApp(
     debugShowCheckedModeBanner: false,
-    title: 'Senvak',
+    title: 'Private & Fast VPN',
     navigatorObservers: [_promotionNavigation],
     theme: ThemeData(
       brightness: Brightness.dark,
@@ -283,7 +283,7 @@ class Brand extends StatelessWidget {
       Icon(Icons.radar_rounded, color: mint, size: 25),
       SizedBox(width: 9),
       Text(
-        'SENVAK',
+        'Private & Fast VPN',
         style: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w900,
