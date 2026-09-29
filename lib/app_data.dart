@@ -561,7 +561,7 @@ class AppStore {
     await SharePlus.instance.share(
       ShareParams(
         files: [XFile(file.path)],
-        subject: 'Senvak audit · ${site.name}',
+        subject: 'Private & Fast VPN audit · ${site.name}',
         text:
             'Measured ${site.points.length} points on ${network.displayName}.',
       ),

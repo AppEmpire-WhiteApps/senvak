@@ -7,9 +7,121 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Senvak</string>
+	<string>Private &amp; Fast VPN</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundleAlternateIcons</key>
+		<dict>
+			<key>K1</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>K1</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>K10</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>K10</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>K11</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>K11</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>K12</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>K12</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>K3</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>K3</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>K4</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>K4</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>K5</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>K5</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>K6</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>K6</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>K7</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>K7</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>K8</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>K8</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>K9</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>K9</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+		</dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>AppIcon</string>
+			</array>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -28,10 +140,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Senvak attaches room photos to Wi-Fi audit measurements.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Senvak can attach existing room photos to audit measurements.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Senvak uses location permission only to read the name of the Wi-Fi network connected to this iPhone.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Senvak can attach existing room photos to audit measurements.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
