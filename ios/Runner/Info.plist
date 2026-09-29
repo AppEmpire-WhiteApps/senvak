@@ -50,15 +50,6 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>K2</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>K2</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>K3</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
